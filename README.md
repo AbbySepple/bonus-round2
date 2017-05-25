@@ -6,6 +6,8 @@ Our client needs a Node Express server application (No Database) that automatica
 - Practice some other ES6 Syntax (let, const, and other in hard mode)
 
 # Base Mode
+Build an application in Node/JavaScript that calculates bonuses of employees. This will all be hard-coded, just like our unit testing activities. Run your app with `node app.js` or similar. There will be no DOM or front-end code...yet.
+
 ## Data Structure
 On the server you should have two class modules. One that will represent the following objects/entities in our Bonus Calculator project.
 
@@ -21,12 +23,13 @@ The Employee class will create instances of Employee objects. It will need the f
 ### Company Class
 The Company class will have a compositional relationship with employees i.e. a company will have employees. There is no inheritance in this application.
 
-The Company class will create instances of Company objects. It will need the following attributes and procedures. 
+The Company class will create instances of Employee objects. Companies will need the following attributes and methods. 
 
 - name
 - employee list (the company *has* employees)
 - a method to add employees
 - a method to calculate all employee bonuses and return
+- possibly other methods in order to keep your app D-R-Y
 
 ## Calculate Bonus Logic
 ### Rating
@@ -41,9 +44,11 @@ The Company class will create instances of Company objects. It will need the fol
 - No bonus can be above 13% or below 0% total.
 
 ## API/Server Routes
+Once you have a working application running just in Node, build out an API to interact with your class modules.
+
 You should create an API to interact with the employees and the bonuses. For now the company can be created (hard coded) at server start up. Do this in an `employee.js` router module. The employee routes should: 
 
-- create a new employee
+- post to create a new employee (from a form or from Postman)
 - get the employee list
 - get the employee bonuses - triggering the Company method to calculate the bonuses and return them to the caller. They do not need to be stored anywhere on the server.
 
