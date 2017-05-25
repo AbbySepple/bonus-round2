@@ -1,0 +1,20 @@
+{
+  "name": "psi-es6-bonus-calc",
+  "version": "1.0.0",
+  "description": "Our client needs a Node Express server application (No Database) that automatically calculates employee bonus for a company. This is very similar, but not identical to the Bonus Calculator we did in week one.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PrimeAcademy/psi-es6-bonus-calc.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PrimeAcademy/psi-es6-bonus-calc/issues"
+  },
+  "homepage": "https://github.com/PrimeAcademy/psi-es6-bonus-calc#readme"
+}
