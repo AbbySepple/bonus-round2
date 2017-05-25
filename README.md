@@ -54,6 +54,7 @@ Given the objects to practice ES6 on the server, start with a minimal front end.
 Explore other syntax changes that were added in ES6. Some things to look into are:
 
 - arrow functions
+- for of loop
 
 # Pro Mode
 Add unit tests to your class modules and server APIs.
