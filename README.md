@@ -12,7 +12,7 @@ Build an application in Node/JavaScript that calculates bonuses of employees. Th
 On the server you should have two class modules. One that will represent the following objects/entities in our Bonus Calculator project.
 
 ### Employee Class
-The Employee class will create instances of Employee objects. It will need the following attributes and procedures. 
+The Employee class will create instances of Employee objects. It will need the following attributes and methods. 
 
 - name
 - employee start date (different from week one app)
