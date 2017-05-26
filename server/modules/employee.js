@@ -9,9 +9,9 @@ class Employee {
       this.reviewRating = reviewRating;
   }//end constructor
   howLong(){
-    var today = new Date("2017/05/25 17:00:00");
+    var today = new Date();
     var diff = Math.abs(today - new Date(this.startDate));
-    return diff;
+    return Math.floor(diff / 31536000000);
   }//end howLong
 }//end class
 var emp = new Employee("meep", "2015/07/30 08:00:00",2345, 3);
