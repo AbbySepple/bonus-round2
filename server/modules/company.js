@@ -11,8 +11,12 @@ class Company {
   }
   calcBonus() {
     var bonusArray = [];
-    for (var i = 0; i < this.employeeList.length; i++) {
-      var employee = this.employeeList[i];
+    //ES6 for of loop:
+    for(var employee of this.employeeList){
+      //ES5 code equivalent:
+    // for (var i = 0; i < this.employeeList.length; i++) {
+      // var employee = this.employeeList[i];
+
       var bonus = 0;
       if (employee.howLong() >= 1) {
         bonus += 0.05;
