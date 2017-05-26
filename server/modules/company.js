@@ -17,7 +17,7 @@ class Company {
       if (employee.howLong() >= 1) {
         bonus += 0.05;
       }
-      switch (employee.reviewRating) {
+      switch (parseInt(employee.reviewRating)) {
         case 1:
         case 2:
           bonus = 0;

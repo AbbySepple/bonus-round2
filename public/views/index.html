@@ -3,8 +3,33 @@
   <head>
     <meta charset="utf-8">
     <title>Employees and Companies</title>
+    <script src="vendors/angular.min.js" charset="utf-8"></script>
+    <script src="scripts/client.js" charset="utf-8"></script>
   </head>
-  <body>
+  <body ng-app="myApp">
     <h1>Employees and Companies</h1>
+    <h2>Add an Employee</h2>
+    <br>
+    <div ng-controller="EmployeeController as ec">
+      <input type="text" placeholder="Name" value="" ng-model="ec.nameIn">
+      <input type="text" placeholder="Start Date" value="" ng-model="ec.startDateIn">
+      <input type="text" placeholder="Salary" value="" ng-model="ec.salaryIn">
+      <input type="text" placeholder="Review Rating" value="" ng-model="ec.reviewRatingIn">
+      <button type="button" name="button" ng-click="ec.addEmployee()">Add</button>
+      <button type="button" name="button" ng-click="ec.calculateBonus()">Calculate Bonuses</button>
+      <h3>Current Employees</h3>
+      <div ng-repeat="employee in ec.employeeList">
+        {{employee.name}}
+      </div>
+      <hr>
+      <h3>Bonuses</h3>
+      <div ng-repeat="bonus in ec.bonusArray">
+        {{bonus.name}}: {{bonus.bonus}}
+      </div>
+    </div>
+
+
+
+
   </body>
 </html>
