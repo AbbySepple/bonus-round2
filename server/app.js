@@ -5,8 +5,9 @@ var Company = require ('./modules/company');
 var Employee = require ('./modules/employee');
 var port = 3366 || process.env.PORT;
 
-
+app.use(express.static('public'));
 app.use (bodyParser.json());
+app.use (bodyParser.urlencoded({extended:true}));
 
 app.use ('/employee', Employee);
 

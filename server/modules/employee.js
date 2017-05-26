@@ -26,6 +26,14 @@ Router.post('/addEmployee', function(req,res){
   res.send('foobarfoo');
 });
 
+Router.get('/employeeList',function(req,res){
+  res.send(BigCompany.getEmployeeList());
+});
+
+Router.get('/getBonuses', function(req,res){
+  res.send(BigCompany.calcBonus());
+});
+
 module.exports=Router;
 
 // for testing in Node

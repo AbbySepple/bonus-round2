@@ -6,6 +6,9 @@ class Company {
   addEmployee(employee) {
     this.employeeList.push(employee);
   }
+  getEmployeeList(){
+    return this.employeeList;
+  }
   calcBonus() {
     var bonusArray = [];
     for (var i = 0; i < this.employeeList.length; i++) {
