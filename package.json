@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/PrimeAcademy/psi-es6-bonus-calc/issues"
   },
-  "homepage": "https://github.com/PrimeAcademy/psi-es6-bonus-calc#readme"
+  "homepage": "https://github.com/PrimeAcademy/psi-es6-bonus-calc#readme",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.3"
+  }
 }

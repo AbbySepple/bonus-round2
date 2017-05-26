@@ -1,4 +1,7 @@
+//REQUIRES
 const Company = require("../modules/company");
+const express = require ('express');
+const Router = express.Router();
 
 
 class Employee {
@@ -14,14 +17,27 @@ class Employee {
     return Math.floor(diff / 31536000000);
   }//end howLong
 }//end class
-var emp = new Employee("meep", "2015/07/30 08:00:00",2345, 3);
-console.log("test: ", emp.howLong());
 
-var emp2 = new Employee("boop", "2016/07/30 08:00:00",28593, 4);
-console.log("test2: ", emp2.howLong());
+var BigCompany = new Company("Big Company");
 
-var comp = new Company("Big Company");
-comp.addEmployee(emp);
-console.log("testing Comp: ", comp);
+Router.post('/addEmployee', function(req,res){
+  var newEmployee = new Employee (req.body.name, req.body.startDate, req.body.salary, req.body.reviewRating);
+  BigCompany.addEmployee(newEmployee);
+  res.send('foobarfoo');
+});
 
-module.exports=Employee;
+module.exports=Router;
+
+// for testing in Node
+// var emp = new Employee("meep", "2015/07/30 08:00:00",2345, 3);
+// console.log("test: ", emp.howLong());
+// var emp2 = new Employee("boop", "2016/07/30 08:00:00",28593, 4);
+// console.log("test2: ", emp2.howLong());
+// var emp3 = new Employee("klop", "2012/06/30 08:00:00",35593, 2);
+// console.log("test3: ", emp3.howLong());
+// var comp = new Company("Big Company");
+// comp.addEmployee(emp);
+// comp.addEmployee(emp2);
+// comp.addEmployee(emp3);
+// console.log('BonusArray:', comp.calcBonus());
+// console.log("testing Comp: ", comp);
